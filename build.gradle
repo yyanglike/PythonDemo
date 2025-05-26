@@ -1,0 +1,131 @@
+plugins {
+    id("java")
+    id("application")
+    id("io.micronaut.application") version "4.5.3"
+    id("org.graalvm.python") version "24.2.0"
+    id("com.gradleup.shadow") version "8.3.6"
+    id("io.micronaut.test-resources") version "4.5.3"
+    id("io.micronaut.aot") version "4.5.3"
+}
+
+
+version = "0.1"
+group = "com.example"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor("io.micronaut.data:micronaut-data-processor")
+    annotationProcessor("io.micronaut:micronaut-http-validation")
+    annotationProcessor("io.micronaut.microstream:micronaut-microstream-annotations")
+    implementation("io.micronaut:micronaut-jackson-databind")
+    implementation("io.micronaut:micronaut-websocket")
+    implementation("io.micronaut.acme:micronaut-acme")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    implementation("io.micronaut.graal-languages:micronaut-graalpy")
+    // implementation "org.graalvm.polyglot:polyglot:24.2.0" // 版本号根据您的 GraalVM 版本调整
+    // implementation "org.graalvm.polyglot:python:24.2.0"
+
+    implementation("io.micronaut.microstream:micronaut-microstream")
+    implementation("io.micronaut.microstream:micronaut-microstream-annotations")
+    implementation("io.micronaut.nats:micronaut-nats")
+    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
+    compileOnly("io.micronaut:micronaut-http-client")
+    runtimeOnly("ch.qos.logback:logback-classic")
+    runtimeOnly("com.mysql:mysql-connector-j")
+    runtimeOnly("org.yaml:snakeyaml")
+    testImplementation("io.micronaut:micronaut-http-client")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.2")
+    developmentOnly("io.micronaut.microstream:micronaut-microstream-rest")
+}
+
+
+application {
+    mainClass = "com.example.Application"
+}
+java {
+    sourceCompatibility = JavaVersion.toVersion("21")
+    targetCompatibility = JavaVersion.toVersion("21")
+}
+
+
+graalvmNative.toolchainDetection = false
+
+micronaut {
+    runtime("netty")
+    testRuntime("junit5")
+    processing {
+        incremental(true)
+        annotations("com.example.*")
+    }
+    aot {
+        // Please review carefully the optimizations enabled below
+        // Check https://micronaut-projects.github.io/micronaut-aot/latest/guide/ for more details
+        optimizeServiceLoading = false
+        convertYamlToJava = false
+        precomputeOperations = true
+        cacheEnvironment = true
+        optimizeClassLoading = true
+        deduceEnvironment = true
+        optimizeNetty = true
+        replaceLogbackXml = true
+    }
+}
+graalvmNative {
+    binaries {
+        named("main") {
+            imageName.set("graalpy-micronaut")
+            mainClass.set("com.example.Application")
+            buildArgs.add('--no-fallback')
+            buildArgs.add('--verbose')
+            // buildArgs.add('--gc=G1')    The G1 garbage collector ('--gc=G1') is currently only supported on Linux AMD64 and AArch64
+            // PGO 配置（二选一）：
+            // 1. 性能分析阶段：启用插桩
+            // buildArgs.add('--pgo-instrument')
+            // 2. 优化阶段：使用分析数据（先注释掉上一行）
+            // buildArgs.add('--pgo=build/pgo/default.iprof')
+            
+            buildArgs.add("--enable-all-security-services")
+            buildArgs.add("--initialize-at-build-time=org.graalvm.polyglot")
+            buildArgs.add("--initialize-at-build-time=org.graalvm.polyglot.proxy")
+            buildArgs.add("--initialize-at-build-time=org.graalvm.polyglot.hosted")
+            buildArgs.add("--initialize-at-build-time=org.graalvm.polyglot.io")
+            buildArgs.add("--initialize-at-build-time=org.graalvm.polyglot.proxy.HostAccess")
+            buildArgs.add('--initialize-at-build-time=org.graalvm.python')
+        }
+    }
+}
+
+graalPy {
+    // 直接像 Maven 那样声明要打包的 Python 包
+    packages = [
+        'pygal==3.0.5',
+        'requests==2.28.1'
+        // "numpy==1.26.4",
+        // "--no-binary=numpy",
+        // 'numpy==1.26.4',    //2.0.2
+        // 'scikit-learn==1.5.2',
+        // 'scipy==1.10.1',
+        // 'mootdx==0.11.7',
+    ]
+}
+
+tasks.named("dockerfileNative") {
+    jdkVersion = "21"
+}
+
+tasks.withType(Jar).configureEach {
+    zip64 = true
+}
+tasks.withType(Zip).configureEach {
+    zip64 = true
+}
+tasks.withType(com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar).configureEach {
+    zip64 = true
+}
+
+//tag::graalpy-gradle-plugin[]
+//end::graalpy-gradle-plugin[]

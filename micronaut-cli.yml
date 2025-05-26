@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.example
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [acme, app-name, data, data-jpa, graalpy, graalvm, gradle, http-client-test, jackson-databind, java, java-application, jdbc-hikari, junit, logback, micronaut-aot, micronaut-build, micronaut-http-validation, microstream, microstream-rest, mysql, nats, netty-server, readme, shade, static-resources, test-resources, websocket, yaml, yaml-build]

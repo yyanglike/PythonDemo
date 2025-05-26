@@ -1,0 +1,27 @@
+micronaut:
+  application:
+    name: PythonDemo
+  server:
+    ssl:
+      enabled: 'true'
+graalvm:
+  python:
+    module:
+      path: '/Users/yangyi/company/java/PythonDemo'  # Added space after colon
+# datasources:
+#   default:
+#     driver-class-name: com.mysql.cj.jdbc.Driver
+#     db-type: mysql
+#     dialect: MYSQL
+#     enabled: false
+# acme:
+#   enabled: 'false'
+#   tos-agree: 'true'
+# nats.default.addresses:
+# - nats://localhost:4222
+# jpa:
+#   default:
+#     properties:
+#       hibernate:
+#         hbm2ddl:
+#           auto: update

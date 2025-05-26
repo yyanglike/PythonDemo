@@ -1,0 +1,15 @@
+[
+    {
+        "name": "com.example.JavaDataReceiver",
+        "methods": [
+            {
+                "name": "processData",
+                "parameterTypes": ["java.lang.String"]
+            },
+            {
+                "name": "processDataFunc",
+                "parameterTypes": []
+            }
+        ]   
+    }
+]
