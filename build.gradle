@@ -102,14 +102,12 @@ graalvmNative {
 graalPy {
     // 直接像 Maven 那样声明要打包的 Python 包
     packages = [
-        'pygal==3.0.5',
-        'requests==2.28.1'
-        // "numpy==1.26.4",
-        // "--no-binary=numpy",
-        // 'numpy==1.26.4',    //2.0.2
-        // 'scikit-learn==1.5.2',
-        // 'scipy==1.10.1',
-        // 'mootdx==0.11.7',
+        "numpy==1.26.4",
+        "--no-binary=numpy",
+        "pandas==2.2.3",
+        "--no-binary=pandas",
+        "websocket-client==1.4.2",
+        "aiohttp==3.8.3",
     ]
 }
 
