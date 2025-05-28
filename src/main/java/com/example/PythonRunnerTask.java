@@ -19,6 +19,8 @@ public class PythonRunnerTask implements Runnable {
 
     private final Configurations configurations;
 
+    private boolean initialized = false;
+
     
     public PythonRunnerTask(Context context, Configurations configurations) {
         this.configurations = configurations;
@@ -28,44 +30,50 @@ public class PythonRunnerTask implements Runnable {
     @Override
     public void run() {
         try {
-            // 从资源中读取 runner.py
-            InputStream is = PythonRunnerTask.class.getResourceAsStream("/org/graalvm/python/vfs/runner.py");
-            if (is == null) {
-                logger.error("未找到 /org/graalvm/python/vfs/runner.py 资源文件");
-                return;
+            if (!initialized) {
+                // 只初始化一次Python环境和JavaDataReceiver
+                InputStream is = PythonRunnerTask.class.getResourceAsStream("/org/graalvm/python/vfs/runner.py");
+                if (is == null) {
+                    logger.error("未找到 /org/graalvm/python/vfs/runner.py 资源文件");
+                    return;
+                }
+                String runnerScript = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+
+                // 在上下文中执行脚本
+                // Create and export Java objects to Python context
+                JavaDataReceiver receiver = new JavaDataReceiver();
+                context.getBindings("python").putMember("javaDataReceiver", receiver);
+                
+                // Execute Python script with configuration
+                // 直接使用原始路径，不再进行转义处理
+                String pythonModulePath = configurations.getPythonModulePath();
+                // 添加空值检查
+                if (pythonModulePath == null) {
+                    throw new IllegalStateException("pythonModulePath is not configured");
+                }
+                String initScript = String.format("""
+                                                  import sys
+                                                  sys.path.append(r'%s')""", 
+                    pythonModulePath);
+                logger.info("Python module path: {}", pythonModulePath);
+                // 将路径设置到Polyglot全局绑定
+                context.getPolyglotBindings().putMember("pythonModulePath", pythonModulePath);
+                // 添加调试日志验证值是否设置成功
+                Value verifiedPath = context.getPolyglotBindings().getMember("pythonModulePath");
+                logger.debug("Verified pythonModulePath in Python context: {}", verifiedPath);
+                
+                // 显式导出变量到Python的全局作用域
+                context.eval("python", "import polyglot\n" 
+                    + "pythonModulePath = polyglot.import_value('pythonModulePath')\n"
+                    + "print(f'Imported pythonModulePath from polyglot: {pythonModulePath}')");
+                logger.info("Setting pythonModulePath to Python context: {}", pythonModulePath);  // 添加调试日志
+                context.eval("python", initScript);
+                context.eval("python", runnerScript);
+
+                initialized = true;
             }
-            String runnerScript = new String(is.readAllBytes(), StandardCharsets.UTF_8);
-            // 在上下文中执行脚本
-            // Create and export Java objects to Python context
-            JavaDataReceiver receiver = new JavaDataReceiver();
-            context.getBindings("python").putMember("javaDataReceiver", receiver);
-            
-            // Execute Python script with configuration
-            // 直接使用原始路径，不再进行转义处理
-            String pythonModulePath = configurations.getPythonModulePath();
-            // 添加空值检查
-            if (pythonModulePath == null) {
-                throw new IllegalStateException("pythonModulePath is not configured");
-            }
-            String initScript = String.format("""
-                                              import sys
-                                              sys.path.append(r'%s')""", 
-                pythonModulePath);
-            logger.info("Python module path: {}", pythonModulePath);
-            // 将路径设置到Polyglot全局绑定
-            context.getPolyglotBindings().putMember("pythonModulePath", pythonModulePath);
-            // 添加调试日志验证值是否设置成功
-            Value verifiedPath = context.getPolyglotBindings().getMember("pythonModulePath");
-            logger.debug("Verified pythonModulePath in Python context: {}", verifiedPath);
-            
-            // 显式导出变量到Python的全局作用域
-            context.eval("python", "import polyglot\n" 
-                + "pythonModulePath = polyglot.import_value('pythonModulePath')\n"
-                + "print(f'Imported pythonModulePath from polyglot: {pythonModulePath}')");
-            logger.info("Setting pythonModulePath to Python context: {}", pythonModulePath);  // 添加调试日志
-            context.eval("python", initScript);
-            context.eval("python", runnerScript);
-            // 调用 runner.py 中的 load_all_py_files 方法
+
+            // 每次run都调用一次load_all_py_files
             Value bindings = context.getBindings("python");
             // Validate configurations before use
             if (configurations == null) {
@@ -77,29 +85,12 @@ public class PythonRunnerTask implements Runnable {
             
             if (pyFileLoader != null && pyFileLoader.canExecute()) {
                 try {
-                    // Save original bindings
-                    Map<String, Object> originalBindings = new HashMap<>();
-                    context.getBindings("python").getMemberKeys()
-                        .forEach(key -> originalBindings.put(key, context.getBindings("python").getMember(key)));
-                    logger.info("Setting pythonModulePath to Python context: {}", pythonModulePath);
-                    
-                    // 将pythonModulePath添加到原始绑定
-                    originalBindings.put("pythonModulePath", pythonModulePath);
-                    
                     pyFileLoader.execute(pythonHome);
                     logger.info("Successfully executed Python file loader with home: {}", pythonHome);
-                    
-                    // Remove new bindings using the saved original bindings
-                    context.getBindings("python").getMemberKeys()
-                        .stream()
-                        .filter(key -> !originalBindings.containsKey(key))
-                        .forEach(context.getBindings("python")::removeMember);
-
                 } catch (PolyglotException e) {
                     logger.error("Python execution failed: {}", e.getMessage());
                     throw new IOException("Python file loading failed", e);
                 } finally {
-                    // Clean up resources
                     System.gc();
                 }
             } else {

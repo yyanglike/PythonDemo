@@ -35,9 +35,8 @@ public class Application {
         // 获取配置 bean 并启动 Python 线程
         Configurations configurations = micronautContext.getBean(Configurations.class);
         logger.info("Python 运行时配置: " + configurations.getPythonModulePath());
-        Thread pythonThread = new Thread(new PythonRunnerTask(pythonContext, configurations));
-        pythonThread.setDaemon(true);
-        pythonThread.start();
+        // Thread pythonThread = new Thread(new PythonRunnerTask(pythonContext, configurations));
+        PythonRunnerService.getInstance(pythonContext, configurations).start();
         System.out.println("应用启动完成");
     }
 }

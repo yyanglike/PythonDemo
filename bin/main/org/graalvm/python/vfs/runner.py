@@ -6,9 +6,18 @@ import ast
 import types
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from logging.handlers import RotatingFileHandler  # 新增
 
-# 配置日志
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# 配置日志：级别为ERROR，写入文件，满1G切换，最多保留3个文件
+log_file = "python_runner.log"
+logging.basicConfig(
+    level=logging.ERROR,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        RotatingFileHandler(log_file, maxBytes=1024*1024*1024, backupCount=3)
+    ]
+)
 
 # 禁止的模块前缀
 DISALLOWED_MODULE_PREFIXES = (
@@ -70,8 +79,13 @@ def load_and_sanitize_module(file_path):
 loaded_modules = {}
 module_mtime_cache = {}
 
-def load_all_py_files():
-    base_dir = os.getcwd()
+# 在模块顶部定义全局线程池
+cpu_count = os.cpu_count() or 4
+executor = ThreadPoolExecutor(max_workers=cpu_count)
+
+def load_all_py_files(path:str = None):
+    start_time = time.time()
+    base_dir = path
     try:
         import polyglot
         base_dir = polyglot.import_value("pythonModulePath")
@@ -81,16 +95,13 @@ def load_all_py_files():
 
     logging.info("查找 .py 文件目录: %s", base_dir)
 
-    try:
-        r = requests.get('https://www.baidu.com', timeout=5)
-        logging.info("网络检查成功，状态码: %s", r.status_code)
-    except Exception as e:
-        logging.error("无法访问百度: %s", e)
-
+    # 记录当前目录下的 py 文件
+    current_files = set()
     modules_to_run = []
     for filename in os.listdir(base_dir):
         if filename.endswith('.py'):
             file_path = os.path.join(base_dir, filename)
+            current_files.add(file_path)
             mtime = os.path.getmtime(file_path)
 
             # 判断是否需要重新加载
@@ -109,23 +120,32 @@ def load_all_py_files():
 
             modules_to_run.append((module, filename[:-3]))
 
+    # 清理缓存中已被删除的 py 文件
+    removed_files = set(loaded_modules.keys()) - current_files
+    for file_path in removed_files:
+        logging.info("清理已删除的模块缓存: %s", file_path)
+        loaded_modules.pop(file_path, None)
+        module_mtime_cache.pop(file_path, None)
+
     results = []
-    cpu_count = os.cpu_count() or 4
-    with ThreadPoolExecutor(max_workers=cpu_count) as executor:
-        future_to_name = {executor.submit(execute_module_method, m, n): n for m, n in modules_to_run}
-        for future in as_completed(future_to_name):
-            name = future_to_name[future]
-            try:
-                result = future.result()
-                results.append((name, result))
-            except Exception as e:
-                logging.error("执行模块 '%s' 过程中出错: %s", name, e)
+    futures = {executor.submit(execute_module_method, m, n): n for m, n in modules_to_run}
+    for future in as_completed(futures):
+        name = futures[future]
+        try:
+            result = future.result()
+            results.append((name, result))
+        except Exception as e:
+            logging.error("执行模块 '%s' 过程中出错: %s", name, e)
 
     for name, result in results:
         logging.info("模块 '%s' 执行结果: %s", name, result)
     
     modules_to_run.clear()
     results.clear()
+
+    elapsed = time.time() - start_time  # 计算耗时
+    if elapsed > 10:
+        logging.error("load_all_py_files 执行时间过长: %.2f 秒", elapsed)
 
 def execute_module_method(module, module_name):
     if hasattr(module, "execute") and callable(module.execute):
@@ -154,8 +174,10 @@ def call_java_object():
     except Exception as e:
         logging.error("调用 Java 对象出错: %s", e)
 
-if __name__ == '__main__':
-    while True:
-        load_all_py_files()
-        call_java_object()
-        time.sleep(20)
+# if __name__ == '__main__':
+#     import gc
+#     while True:
+#         load_all_py_files()
+#         # call_java_object()
+#         gc.collect()
+#         time.sleep(20)

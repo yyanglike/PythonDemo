@@ -61,3 +61,4 @@
 
 
 
+./my-app-native -Xmx128m -Xms16m -XX:+UseSerialGC --verbose:gc

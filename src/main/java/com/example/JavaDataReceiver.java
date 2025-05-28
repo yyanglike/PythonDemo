@@ -3,6 +3,8 @@ package com.example;
 import java.util.function.Function;
 
 import org.graalvm.polyglot.HostAccess;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import io.micronaut.core.annotation.ReflectionConfig;
 import io.micronaut.core.annotation.ReflectionConfig.ReflectiveMethodConfig;
@@ -16,10 +18,11 @@ import io.micronaut.core.annotation.ReflectionConfig.ReflectiveMethodConfig;
   }
 )
 public class JavaDataReceiver {
+    private static final Logger logger = LoggerFactory.getLogger(JavaDataReceiver.class);
 
     @HostAccess.Export
     public String processData(String data) {
-        System.out.println("JavaDataReceiver received data: " + data);
+        // logger.info("JavaDataReceiver received data: {}", data);
         return "Processed: " + data;
     }
 
@@ -31,7 +34,7 @@ public class JavaDataReceiver {
     
     @HostAccess.Export
     public String processOther() {
-        System.out.println("JavaDataReceiver processOther executed");
+        // logger.info("JavaDataReceiver processOther executed");
         return "Other Processed";
     }
     

@@ -7,7 +7,7 @@ micronaut:
 graalvm:
   python:
     module:
-      path: '/Users/yangyi/company/java/PythonDemo'  # Added space after colon
+      path: '/home/yangyi/company/java/PythonDemo'  # Added space after colon
 # datasources:
 #   default:
 #     driver-class-name: com.mysql.cj.jdbc.Driver
