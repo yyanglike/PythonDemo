@@ -1,0 +1,1155 @@
+{
+  "resources":{
+  "includes":[{
+    "pattern":"\\QMETA-INF/graalvm/com.oracle.truffle.enterprise/version\\E"
+  }, {
+    "pattern":"\\QMETA-INF/graalvm/org.graalvm.polyglot/version\\E"
+  }, {
+    "pattern":"\\QMETA-INF/graalvm/org.graalvm.truffle/version\\E"
+  }, {
+    "pattern":"\\QMETA-INF/micronaut/\\E"
+  }, {
+    "pattern":"\\QMETA-INF/native/libnetty_tcnative.so\\E"
+  }, {
+    "pattern":"\\QMETA-INF/native/libnetty_tcnative_linux_x86_64.so\\E"
+  }, {
+    "pattern":"\\QMETA-INF/native/libnetty_tcnative_linux_x86_64_fedora.so\\E"
+  }, {
+    "pattern":"\\QMETA-INF/native/libnetty_tcnative_x86_64.so\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/engine/libtruffleattach/linux/amd64/sha256\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/include.sha256\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/libgraalpy.sha256\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/libpython.sha256\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/linux/amd64/native.sha256\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/nfi-native/libnfi/linux/amd64/sha256\\E"
+  }, {
+    "pattern":"\\QMETA-INF/resources/ni.sha256\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/ch.qos.logback.classic.spi.Configurator\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.graal.python.builtins.PythonBuiltins\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.api.TruffleRuntimeAccess\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.api.impl.TruffleLocator\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.api.instrumentation.provider.TruffleInstrumentProvider\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.api.library.provider.DefaultExportProvider\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.api.object.LayoutFactory\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.api.provider.InternalResourceProvider\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.api.provider.TruffleLanguageProvider\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.api.strings.provider.JCodingsProvider\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.runtime.EngineCacheSupport\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.runtime.FloodControlHandler\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.runtime.LoopNodeFactory\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.runtime.TruffleTypes\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/com.oracle.truffle.runtime.jfr.EventFactory$Provider\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/io.micronaut.context.ApplicationContextConfigurer\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/io.micronaut.context.env.PropertyExpressionResolver\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/io.micronaut.context.env.PropertySourceLoader\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/io.micronaut.core.beans.BeanIntrospectionReference\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/io.micronaut.core.convert.TypeConverterRegistrar\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/io.micronaut.core.optim.StaticOptimizations$Loader\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/java.lang.System$LoggerFinder\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/java.net.spi.InetAddressResolverProvider\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/java.net.spi.URLStreamHandlerProvider\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/java.nio.channels.spi.SelectorProvider\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/java.nio.file.spi.FileSystemProvider\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/java.time.zone.ZoneRulesProvider\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/javax.xml.parsers.SAXParserFactory\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/jdk.vm.ci.services.JVMCIServiceLocator\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/org.graalvm.home.HomeFinder\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/org.graalvm.polyglot.impl.AbstractPolyglotImpl\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/org.slf4j.spi.SLF4JServiceProvider\\E"
+  }, {
+    "pattern":"\\Qapplication.json\\E"
+  }, {
+    "pattern":"\\Qapplication.properties\\E"
+  }, {
+    "pattern":"\\Qapplication.yml\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/PythonBuiltins.class\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenABC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenCODECS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenCOLLECTIONS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenCOLLECTIONS_ABC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenCONTEXTLIB.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenCOPYREG.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenDATETIME.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ALIASES.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ASCII.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_BASE64_CODEC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_BIG5.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_BIG5HKSCS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_BZ2_CODEC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CHARMAP.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP037.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1006.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1026.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1125.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1140.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1250.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1251.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1252.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1253.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1254.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1255.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1256.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1257.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP1258.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP273.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP424.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP437.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP500.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP720.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP737.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP775.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP850.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP852.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP855.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP856.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP857.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP858.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP860.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP861.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP862.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP863.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP864.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP865.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP866.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP869.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP874.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP875.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP932.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP949.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_CP950.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_EUC_JISX0213.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_EUC_JIS_2004.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_EUC_JP.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_EUC_KR.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_GB18030.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_GB2312.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_GBK.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_HEX_CODEC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_HP_ROMAN8.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_HZ.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_IDNA.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO2022_JP.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO2022_JP_1.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO2022_JP_2.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO2022_JP_2004.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO2022_JP_3.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO2022_JP_EXT.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO2022_KR.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_1.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_10.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_11.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_13.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_14.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_15.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_16.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_2.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_3.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_4.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_5.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_6.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_7.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_8.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ISO8859_9.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_JOHAB.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_KOI8_R.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_KOI8_T.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_KOI8_U.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_KZ1048.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_LATIN_1.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_MAC_ARABIC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_MAC_CROATIAN.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_MAC_CYRILLIC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_MAC_FARSI.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_MAC_GREEK.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_MAC_ICELAND.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_MAC_LATIN2.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_MAC_ROMAN.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_MAC_ROMANIAN.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_MAC_TURKISH.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_MBCS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_OEM.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_PALMOS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_PTCP154.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_PUNYCODE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_QUOPRI_CODEC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_RAW_UNICODE_ESCAPE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ROT_13.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_SHIFT_JIS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_SHIFT_JISX0213.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_SHIFT_JIS_2004.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_TIS_620.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UNDEFINED.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UNICODE_ESCAPE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UTF_16.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UTF_16_BE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UTF_16_LE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UTF_32.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UTF_32_BE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UTF_32_LE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UTF_7.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UTF_8.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UTF_8_SIG.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_UU_CODEC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENCODINGS_ZLIB_CODEC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenENUM.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenFROZEN_ONLY.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenFUNCTOOLS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenGENERICPATH.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenGRAALPY_BUILTINS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenGRAALPY_JAVA.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenGRAALPY_PIP_HOOK.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenGRAALPY_UNICODEDATA.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenGRAALPY__POLYGLOT.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenGRAALPY__SRE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenGRAALPY__SYSCONFIG.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenGRAALPY__WEAKREF.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenGRAALPY___GRAALPYTHON__.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenHEAPQ.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenIMPORTLIB_MACHINERY.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenIMPORTLIB_UTIL.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenIMPORTLIB__BOOTSTRAP.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenIMPORTLIB__BOOTSTRAP_EXTERNAL.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenINSPECT.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenIO.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenKEYWORD.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenLOCALE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenNTPATH.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenOPERATOR.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenOS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenPOLYGLOT_ARROW.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenPOSIXPATH.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenRE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenREPRLIB.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenRE__CASEFIX.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenRE__COMPILER.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenRE__CONSTANTS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenRE__PARSER.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenRLCOMPLETER.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenRUNPY.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenSITE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenSRE_COMPILE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenSRE_CONSTANTS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenSRE_PARSE.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenSTAT.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenTYPES.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenWARNINGS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/FrozenZIPIMPORT.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/Frozen_COLLECTIONS_ABC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/Frozen_PY_ABC.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/Frozen_SITEBUILTINS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/Frozen_SYSCONFIGDATA.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/Frozen_WEAKREFSET.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/Frozen__HELLO__.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/Frozen__PHELLO__.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/Frozen__PHELLO___HAM.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/Frozen__PHELLO___HAM_EGGS.bin\\E"
+  }, {
+    "pattern":"\\Qcom/oracle/graal/python/builtins/objects/module/Frozen__PHELLO___SPAM.bin\\E"
+  }, {
+    "pattern":"\\Qgraalpy_versions\\E"
+  }, {
+    "pattern":"\\Qlogback-test.scmo\\E"
+  }, {
+    "pattern":"\\Qlogback-test.xml\\E"
+  }, {
+    "pattern":"\\Qlogback.scmo\\E"
+  }, {
+    "pattern":"\\Qlogback.xml\\E"
+  }, {
+    "pattern":"\\Qmicronaut-banner.txt\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/fileslist.txt\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/_distutils_hack/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/_distutils_hack/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/certifi/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/certifi/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/certifi/__pycache__/core.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/certifi/core.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/__pycache__/api.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/__pycache__/cd.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/__pycache__/constant.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/__pycache__/legacy.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/__pycache__/md.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/__pycache__/models.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/__pycache__/utils.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/__pycache__/version.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/api.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/assets/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/assets/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/cd.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/constant.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/legacy.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/md.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/models.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/utils.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/charset_normalizer/version.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/distutils-precedence.pth\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/idna/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/idna/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/idna/__pycache__/core.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/idna/__pycache__/idnadata.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/idna/__pycache__/intranges.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/idna/__pycache__/package_data.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/idna/core.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/idna/idnadata.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/idna/intranges.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/idna/package_data.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/__config__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/__pycache__/__config__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/__pycache__/_distributor_init.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/__pycache__/_globals.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/__pycache__/_pytesttester.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/__pycache__/ctypeslib.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/__pycache__/dtypes.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/__pycache__/exceptions.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/__pycache__/version.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_distributor_init.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_globals.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_pytesttester.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/__pycache__/_array_like.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/__pycache__/_char_codes.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/__pycache__/_dtype_like.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/__pycache__/_nbit.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/__pycache__/_nested_sequence.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/__pycache__/_scalars.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/__pycache__/_shape.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/_array_like.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/_char_codes.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/_dtype_like.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/_nbit.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/_nested_sequence.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/_scalars.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_typing/_shape.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_utils/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_utils/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_utils/__pycache__/_convertions.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_utils/__pycache__/_inspect.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_utils/_convertions.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/_utils/_inspect.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/compat/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/compat/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/compat/__pycache__/py3k.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/compat/py3k.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_add_newdocs.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_add_newdocs_scalars.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_asarray.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_dtype.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_dtype_ctypes.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_exceptions.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_internal.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_machar.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_methods.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_string_helpers.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_type_aliases.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/_ufunc_config.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/arrayprint.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/defchararray.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/einsumfunc.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/fromnumeric.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/function_base.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/getlimits.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/memmap.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/multiarray.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/numeric.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/numerictypes.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/overrides.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/records.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/shape_base.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/__pycache__/umath.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_add_newdocs.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_add_newdocs_scalars.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_asarray.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_dtype.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_dtype_ctypes.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_exceptions.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_internal.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_machar.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_methods.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_multiarray_tests.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_multiarray_umath.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_string_helpers.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_type_aliases.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/_ufunc_config.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/arrayprint.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/defchararray.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/einsumfunc.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/fromnumeric.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/function_base.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/getlimits.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/memmap.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/multiarray.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/numeric.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/numerictypes.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/overrides.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/records.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/shape_base.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/core/umath.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/ctypeslib.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/dtypes.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/exceptions.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/fft/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/fft/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/fft/__pycache__/_pocketfft.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/fft/__pycache__/helper.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/fft/_pocketfft.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/fft/_pocketfft_internal.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/fft/helper.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/_datasource.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/_iotools.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/_version.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/arraypad.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/arraysetops.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/arrayterator.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/format.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/function_base.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/histograms.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/index_tricks.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/mixins.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/nanfunctions.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/npyio.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/polynomial.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/scimath.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/shape_base.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/stride_tricks.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/twodim_base.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/type_check.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/ufunclike.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/__pycache__/utils.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/_datasource.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/_iotools.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/_version.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/arraypad.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/arraysetops.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/arrayterator.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/format.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/function_base.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/histograms.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/index_tricks.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/mixins.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/nanfunctions.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/npyio.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/polynomial.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/scimath.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/shape_base.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/stride_tricks.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/twodim_base.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/type_check.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/ufunclike.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/lib/utils.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/linalg/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/linalg/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/linalg/__pycache__/linalg.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/linalg/_umath_linalg.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/linalg/linalg.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/ma/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/ma/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/ma/__pycache__/core.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/ma/__pycache__/extras.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/ma/core.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/ma/extras.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/matrixlib/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/matrixlib/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/matrixlib/__pycache__/defmatrix.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/matrixlib/defmatrix.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/__pycache__/_polybase.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/__pycache__/chebyshev.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/__pycache__/hermite.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/__pycache__/hermite_e.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/__pycache__/laguerre.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/__pycache__/legendre.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/__pycache__/polynomial.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/__pycache__/polyutils.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/_polybase.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/chebyshev.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/hermite.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/hermite_e.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/laguerre.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/legendre.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/polynomial.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/polynomial/polyutils.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/__pycache__/_pickle.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/_bounded_integers.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/_common.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/_generator.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/_mt19937.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/_pcg64.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/_philox.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/_pickle.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/_sfc64.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/bit_generator.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/random/mtrand.graalpy242-311-native-x86_64-linux.so\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/numpy/version.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/__version__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/_internal_utils.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/adapters.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/api.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/auth.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/certs.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/compat.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/cookies.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/exceptions.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/hooks.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/models.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/packages.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/sessions.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/status_codes.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/structures.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__pycache__/utils.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/__version__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/_internal_utils.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/adapters.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/api.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/auth.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/certs.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/compat.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/cookies.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/exceptions.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/hooks.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/models.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/packages.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/sessions.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/status_codes.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/structures.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/requests/utils.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__pycache__/_collections.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__pycache__/_version.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__pycache__/connection.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__pycache__/connectionpool.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__pycache__/exceptions.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__pycache__/fields.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__pycache__/filepost.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__pycache__/poolmanager.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__pycache__/request.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/__pycache__/response.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/_collections.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/_version.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/connection.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/connectionpool.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/contrib/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/contrib/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/contrib/__pycache__/_appengine_environ.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/contrib/__pycache__/socks.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/contrib/_appengine_environ.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/contrib/socks.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/exceptions.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/fields.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/filepost.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/packages/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/packages/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/packages/__pycache__/six.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/packages/six.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/poolmanager.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/request.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/response.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__init__.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/__init__.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/connection.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/proxy.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/queue.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/request.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/response.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/retry.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/ssl_.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/ssl_match_hostname.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/ssltransport.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/timeout.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/url.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/__pycache__/wait.graalpy242-311.pyc\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/connection.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/proxy.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/queue.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/request.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/response.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/retry.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/ssl_.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/ssl_match_hostname.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/ssltransport.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/timeout.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/url.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/lib/python3.11/site-packages/urllib3/util/wait.py\\E"
+  }, {
+    "pattern":"\\Qorg.graalvm.python.vfs/venv/pyvenv.cfg\\E"
+  }, {
+    "pattern":"\\Qorg/graalvm/python/vfs/runner.py\\E"
+  }, {
+    "pattern":"\\Qorg/graalvm/shadowed/com/ibm/icu/ICUConfig.properties\\E"
+  }, {
+    "pattern":"\\Qorg/graalvm/shadowed/com/ibm/icu/impl/data/icudata/ucase.icu\\E"
+  }, {
+    "pattern":"\\Qorg/graalvm/shadowed/com/ibm/icu/impl/data/icudata/uprops.icu\\E"
+  }, {
+    "pattern":"java.base:\\Qjdk/internal/icu/impl/data/icudt72b/nfkc.nrm\\E"
+  }, {
+    "pattern":"java.base:\\Qsun/net/www/content-types.properties\\E"
+  }, {
+    "pattern":"jdk.jfr:\\Qjdk/jfr/internal/query/view.ini\\E"
+  }, {
+    "pattern":"jdk.jfr:\\Qjdk/jfr/internal/types/metadata.bin\\E"
+  }]},
+  "bundles":[]
+}

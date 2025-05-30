@@ -62,3 +62,8 @@
 
 
 ./my-app-native -Xmx128m -Xms16m -XX:+UseSerialGC --verbose:gc
+/build/native/nativeCompile/graalpy-micronaut --graalvm.python.module.path=/home/yangyi/company/java/PythonDemo -XX:+PrintGC -XX:+VerboseGC
+
+
+
+java -agentlib:native-image-agent=config-output-dir=src/main/resources/META-INF/native-image -jar build/libs/PythonDemo-0.1-all.jar 

@@ -26,10 +26,11 @@ public class JavaDataReceiver {
         return "Processed: " + data;
     }
 
+    private final Function<String, String> processFunc = new ProcessDataFunction(this);
+
     @HostAccess.Export
     public Function<String, String> processDataFunc() {
-        // 返回一个具名的 Function 实现，避免 Lambda 造成的反射问题
-        return new ProcessDataFunction(this);
+        return processFunc;
     }
     
     @HostAccess.Export

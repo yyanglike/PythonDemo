@@ -83,15 +83,23 @@ module_mtime_cache = {}
 cpu_count = os.cpu_count() or 4
 executor = ThreadPoolExecutor(max_workers=cpu_count)
 
-def load_all_py_files(path:str = None):
+import resource
+
+def get_memory_usage_mb():
+    usage = resource.getrusage(resource.RUSAGE_SELF)
+    return usage.ru_maxrss   # 单位: MB
+
+
+def load_all_py_files(path=None):
     start_time = time.time()
     base_dir = path
-    try:
-        import polyglot
-        base_dir = polyglot.import_value("pythonModulePath")
-        logging.info("使用配置的 Python 模块路径: %s", base_dir)
-    except Exception as e:
-        logging.info("使用默认路径（当前工作目录）: %s", e)
+    mem_before = get_memory_usage_mb()
+    # try:
+    #     import polyglot
+    #     base_dir = polyglot.import_value("pythonModulePath")
+    #     logging.info("使用配置的 Python 模块路径: %s", base_dir)
+    # except Exception as e:
+    #     logging.info("使用默认路径（当前工作目录）: %s", e)
 
     logging.info("查找 .py 文件目录: %s", base_dir)
 
@@ -146,6 +154,10 @@ def load_all_py_files(path:str = None):
     elapsed = time.time() - start_time  # 计算耗时
     if elapsed > 10:
         logging.error("load_all_py_files 执行时间过长: %.2f 秒", elapsed)
+
+    mem_after = get_memory_usage_mb()
+    logging.error(f"内存变化: {mem_after - mem_before:.2f} KB")    
+
 
 def execute_module_method(module, module_name):
     if hasattr(module, "execute") and callable(module.execute):

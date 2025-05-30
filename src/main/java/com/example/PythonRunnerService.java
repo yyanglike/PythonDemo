@@ -28,7 +28,9 @@ public class PythonRunnerService {
 
     public void start() {
         logger.info("Starting PythonRunnerService scheduled task.");
-        scheduler.scheduleAtFixedRate(task, 0, 10, TimeUnit.SECONDS);
+        // scheduler.scheduleAtFixedRate(task, 0, 10, TimeUnit.SECONDS);
+        // 任务执行完毕后，等待2秒再执行下一次
+        scheduler.scheduleWithFixedDelay(task, 0, 2, TimeUnit.SECONDS);        
     }
 
     public void stop() {

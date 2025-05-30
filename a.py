@@ -18,12 +18,13 @@ logging.basicConfig(
 
 logging.info("Hello")
 
+
 def call_java_object():
     try:
-        java_receiver = polyglot.import_value("javaDataReceiver")
+
         # logging.info("Java receiver object: %s", java_receiver)
         # logging.info("Available members: %s", dir(java_receiver))
-        
+        java_receiver = polyglot.import_value("javaDataReceiver")        
         # Get the Function object from processDataFunc
         process_func = java_receiver.processDataFunc()
         # logging.info("ProcessDataFunc: %s", process_func)
@@ -97,11 +98,12 @@ def execute():
     # logging.info("Execution finished")
     # 用法
     mem_before = get_memory_usage_mb()
+
     call_java_object()
     test()
     create_bar_chart("output.svg")
     mem_after = get_memory_usage_mb()
-    logging.info(f"内存变化: {mem_after - mem_before:.2f} MB")    
+    logging.error(f"内存变化: {mem_after - mem_before:.2f} KB")    
 
 
 import resource

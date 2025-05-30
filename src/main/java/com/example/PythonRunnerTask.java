@@ -42,7 +42,7 @@ public class PythonRunnerTask implements Runnable {
                 // 在上下文中执行脚本
                 // Create and export Java objects to Python context
                 JavaDataReceiver receiver = new JavaDataReceiver();
-                context.getBindings("python").putMember("javaDataReceiver", receiver);
+                context.getPolyglotBindings().putMember("javaDataReceiver", receiver);
                 
                 // Execute Python script with configuration
                 // 直接使用原始路径，不再进行转义处理
@@ -59,14 +59,22 @@ public class PythonRunnerTask implements Runnable {
                 // 将路径设置到Polyglot全局绑定
                 context.getPolyglotBindings().putMember("pythonModulePath", pythonModulePath);
                 // 添加调试日志验证值是否设置成功
-                Value verifiedPath = context.getPolyglotBindings().getMember("pythonModulePath");
-                logger.debug("Verified pythonModulePath in Python context: {}", verifiedPath);
+                // Value verifiedPath = context.getPolyglotBindings().getMember("pythonModulePath");
+                // logger.debug("Verified pythonModulePath in Python context: {}", verifiedPath);
                 
                 // 显式导出变量到Python的全局作用域
                 context.eval("python", "import polyglot\n" 
                     + "pythonModulePath = polyglot.import_value('pythonModulePath')\n"
                     + "print(f'Imported pythonModulePath from polyglot: {pythonModulePath}')");
+
+                // 显式将 javaDataReceiver 暴露到 Python 全局作用域
+                context.eval("python", "import polyglot\n"
+                    + "javaDataReceiver = polyglot.import_value('javaDataReceiver')\n"
+                    + "print(f'Imported javaDataReceiver from polyglot: {javaDataReceiver}')");
+
                 logger.info("Setting pythonModulePath to Python context: {}", pythonModulePath);  // 添加调试日志
+
+
                 context.eval("python", initScript);
                 context.eval("python", runnerScript);
 
@@ -91,7 +99,7 @@ public class PythonRunnerTask implements Runnable {
                     logger.error("Python execution failed: {}", e.getMessage());
                     throw new IOException("Python file loading failed", e);
                 } finally {
-                    System.gc();
+                    // System.gc();
                 }
             } else {
                 String errorMsg = "Missing required Python function: load_all_py_files";
