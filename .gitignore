@@ -16,3 +16,4 @@ out/
 *.py
 bin/
 *.log
+graalpy.resources/

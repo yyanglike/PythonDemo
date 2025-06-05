@@ -1,7 +1,12 @@
 package com.example;
 
+import java.io.IOException;
+import java.nio.file.Path;
+
 import org.graalvm.polyglot.Context;
+import org.graalvm.polyglot.Engine;
 import org.graalvm.python.embedding.GraalPyResources;
+import org.graalvm.python.embedding.VirtualFileSystem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +25,28 @@ public class Application {
     public static void main(String[] args) {
         // 创建共享 Context，并允许 HostAccess.ALL
         // 使用GraalPyResources创建预配置的Python上下文
-        Context pythonContext = GraalPyResources.createContext();
+        var engine = Engine.create(); 
+        var resourcesDir = Path.of(System.getProperty("user.dir"), "graalpy.resources");
+        if (!resourcesDir.toFile().isDirectory()) { // ②
+            var fs = VirtualFileSystem.create();
+            try {
+                GraalPyResources.extractVirtualFileSystemResources(fs, resourcesDir);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }        
+        var pythonContext = GraalPyResources.contextBuilder(resourcesDir)
+            .engine(engine)
+            .allowNativeAccess(true) // ③
+            .allowCreateProcess(true) // ④
+            .allowExperimentalOptions(true)
+            .option("python.IsolateNativeModules", "true") // ⑤
+            .option("python.WarnExperimentalFeatures", "false") // 关闭实验性警告
+            // 内存管理相关参数
+            .option("python.BackgroundGCTaskInterval", "1000")         // 每1秒检测一次
+            .option("python.BackgroundGCTaskThreshold", "1048576")     // 增长1MB就检测
+            .option("python.BackgroundGCTaskMinimum", "10485760")      // 超过10MB才检测
+            .build();
         pythonContext.initialize("python");
 
         // 先启动 Micronaut 应用获取 ApplicationContext

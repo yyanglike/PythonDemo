@@ -88,7 +88,7 @@ def test():
     # logging.info(f"矩阵相乘结果:\n{matrix_product}")
     # logging.info(f"矩阵A的转置:\n{matrix_transpose}")
     # logging.info(f"矩阵A的行列式: {determinant}")
-    # logging.info(f"矩阵A的逆矩阵:\n{matrix_inverse}")
+    logging.error(f"矩阵A的逆矩阵:\n{matrix_inverse}")
 
 
 def execute():
@@ -101,9 +101,9 @@ def execute():
 
     call_java_object()
     test()
-    create_bar_chart("output.svg")
+    # create_bar_chart("output.svg")
     mem_after = get_memory_usage_mb()
-    logging.error(f"内存变化: {mem_after - mem_before:.2f} KB")    
+    # logging.error(f"内存变化: {mem_after - mem_before:.2f} KB")    
 
 
 import resource

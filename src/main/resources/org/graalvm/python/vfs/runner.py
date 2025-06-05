@@ -93,7 +93,7 @@ def get_memory_usage_mb():
 def load_all_py_files(path=None):
     start_time = time.time()
     base_dir = path
-    mem_before = get_memory_usage_mb()
+    # mem_before = get_memory_usage_mb()
     # try:
     #     import polyglot
     #     base_dir = polyglot.import_value("pythonModulePath")
@@ -141,7 +141,7 @@ def load_all_py_files(path=None):
         name = futures[future]
         try:
             result = future.result()
-            results.append((name, result))
+            # results.append((name, result))
         except Exception as e:
             logging.error("执行模块 '%s' 过程中出错: %s", name, e)
 
@@ -152,29 +152,44 @@ def load_all_py_files(path=None):
     results.clear()
 
     elapsed = time.time() - start_time  # 计算耗时
-    if elapsed > 10:
+    if elapsed > 1:
         logging.error("load_all_py_files 执行时间过长: %.2f 秒", elapsed)
 
-    mem_after = get_memory_usage_mb()
-    logging.error(f"内存变化: {mem_after - mem_before:.2f} KB")    
+    import gc
+    gc.collect()  # 强制垃圾回收，清理内存
+
+    # mem_after = get_memory_usage_mb()
+    # logging.error(f"内存变化: {mem_after - mem_before:.2f} KB")    
 
 
 def execute_module_method(module, module_name):
-    if hasattr(module, "execute") and callable(module.execute):
-        start_time = time.time()
-        try:
+    try:
+        if hasattr(module, "__dict__"):
+            before_keys = set(module.__dict__.keys())
+        else:
+            before_keys = set()
+        if hasattr(module, "execute") and callable(module.execute):
+            start_time = time.time()
             result = module.execute()
-        except Exception as e:
-            logging.error("模块 '%s' 的 execute() 执行异常: %s", module_name, e)
+            elapsed = time.time() - start_time
+            logging.info("模块 '%s' 执行耗时 %.2f 秒，结果: %s", module_name, elapsed, result)
+            if elapsed > 5:
+                logging.warning("模块 '%s' 执行时间超过 5 秒", module_name)
+            return result
+        else:
+            logging.info("模块 '%s' 没有可执行的 execute 方法", module_name)
             return None
-        elapsed = time.time() - start_time
-        logging.info("模块 '%s' 执行耗时 %.2f 秒，结果: %s", module_name, elapsed, result)
-        if elapsed > 5:
-            logging.warning("模块 '%s' 执行时间超过 5 秒", module_name)
-        return result
-    else:
-        logging.info("模块 '%s' 没有可执行的 execute 方法", module_name)
-        return None
+    finally:
+        # 只清理新增属性，不移除缓存
+        if hasattr(module, "__dict__"):
+            after_keys = set(module.__dict__.keys())
+            new_keys = after_keys - before_keys
+            for k in new_keys:
+                try:
+                    del module.__dict__[k]
+                except Exception:
+                    pass
+        # 不要在这里 pop loaded_modules
 
 def call_java_object():
     try:

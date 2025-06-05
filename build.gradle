@@ -89,7 +89,7 @@ graalvmNative {
             // 2. 优化阶段：使用分析数据（先注释掉上一行）
             // buildArgs.add('--pgo=build/pgo/default.iprof')
             
-            buildArgs.add("--enable-all-security-services")
+            // buildArgs.add("--enable-all-security-services")
             buildArgs.add("--initialize-at-build-time=org.graalvm.polyglot")
             buildArgs.add("--initialize-at-build-time=org.graalvm.polyglot.proxy")
             buildArgs.add("--initialize-at-build-time=org.graalvm.polyglot.hosted")
